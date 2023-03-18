@@ -9,85 +9,64 @@
 </head>
 <body>
     <header class="header">
-        <div class="upper-menu"> 
-            <div class="upper-menu__group-1">
-                <button class="upper-menu__burger"><img src="img/burger.svg" alt="burger"></button>
-                <img class="upper-menu__divider-1" src="img/divider.svg" alt="divider">
-                <img class="upper-menu__group" src="img/group.svg" alt="group">
-            </div>
-            <div class="upper-menu__group-2">
-                <a href="#">
-                    <button class="upper-menu__call"><img src="img/call.svg" alt="call"></button>
-                </a>
-                <a href="#">
-                    <button class="upper-menu__chat"><img src="img/chat.svg" alt="chat"></button>
-                </a>
-                <a href="#">
-                    <button class="upper-menu__profile"><img src="img/profile.svg" alt="profile"></button>
-                </a>
-                <img class="upper-menu__divider-2" src="img/divider.svg" alt="divider">
-                <a href="#">
-                    <button class="upper-menu__repair"><img src="img/repair.svg" alt="repair"></button>
-                </a>
-                <a href="#">
-                    <button class="upper-menu__checkstatus"><img src="img/checkstatus.svg" alt="checkstatus"></button>
-                </a>
+        <div class="container">
+            <div class="header__raw">
+                <button class="header__burger"><img src="assets/img/burger.svg" alt="burger"></button>
+                <a class="header__label" href=#><img src="assets/img/group.svg" alt="label"></a>
+                <ul class="header__actions">
+                    <li><button class="header__call"><img src="assets/img/call.svg" alt="call"></button></li>
+                    <li><button class="header__chat"><img src="assets/img/chat.svg" alt="chat"></button></li>
+                    <li><button class="header__profile"><img src="assets/img/profile.svg" alt="profile"></button></li>
+                    <li><button class="header__repair"><img src="assets/img/repair.svg" alt="repair"></button></li>
+                    <li><button class="header__checkstatus"><img src="assets/img/checkstatus.svg" alt="checkstatus"></button></li>
+                </ul>
             </div>
         </div>
     </header>
-    <main class="main">
-        <div class="container-1">
-            <div class="main-title">
-                <img class="main-title__highlight" src="img/highlight.svg" alt="highlight">
-                <h1 class="main-title__title">Услуги и сервисы</h1>
-            </div>
-            <div class="main-menu">
-                <a class="main-menu__item" href="#">Ремонтируемые устройства</a>
-                <a class="main-menu__item" href="#">Цены на услуги</a>
-                <a class="main-menu__item" href="#">Адреса сервисных центров</a>
-                <a class="main-menu__item" href="#">Специальные цены</a>
-                <a class="main-menu__item" href="#">Ремонтируемые бренды</a>
-            </div>
-            <div class="main-review">
-                <a class="main-review__review" href="#">Отзывы</a>
+    <main>
+        <div class="title">
+            <div class="container">
+                <div class="title__raw">
+                    <h2 class="title__text">Услуги и сервисы</h2>
+                    <ul class="title__buttons">
+                        <li><button class="title__call">Оставить заявку&ensp;<img src="assets/img/repair.svg" alt="call"></button></li>
+                        <li><button class="title__chat">Статус ремонта&ensp;<img src="assets/img/checkstatus.svg" alt="chat"></button></li>
+                    </ul>
+                </div>
+            </div>    
+        </div>
+        <div class="menu">
+            <div class="container">
+                <menu>
+                    <ul class="menu__list">
+                        <li><a class="menu__item" href="#">Ремонтируемые устройства</a></li>
+                        <li><a class="menu__item" href="#">Цены на услуги</a></li>
+                        <li><a class="menu__item" href="#">Адреса сервисных центров</a></li>
+                        <li><a class="menu__item" href="#">Специальные цены</a></li>
+                        <li><a class="menu__item" href="#">Ремонтируемые бренды</a></li>
+                    </ul>
+                </menu>
             </div>
         </div>
-        <div class="container-2">
-            <div class="main-text">
-                <article class="main-text__article">
-                <p>Мы являемся авторизованным сервисным центром по ремонту техники Dell. 
-                    Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
-                <p>Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, 
-                    что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</p>
-                </article>
-                
-                <!-- <div class="main-text__next">
-                    <img src="img/icon.svg" alt="icon">
-                    <span class="main-text__read-next">Читать далее</span>
-                </div> -->
-                <input type="checkbox" id="raz" class="del"/>
-                <label for="raz" class="del"><img src="img/icon.svg" alt="icon">&ensp;Читать далее</label>
+        <div class="review">
+            <div class="container">
+                <a class="review__text"href="#">Отзывы</a>
             </div>
-            <img class="picture" src="./img/_MG_3223.png" alt="Picture CPS">
+        </div>
+        <div class="about">
+            <div class="about__row">
+                <div class="container">
+                    <article class="about__article">
+                        <p>Мы являемся авторизованным сервисным центром по ремонту техники Dell. 
+                            Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
+                        <p>Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, 
+                            что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</p>
+                    </article>
+                    <button class="about__button"><img src="assets/img/icon.svg" alt="read  next">&ensp;Читать далее</button>
+                </div>
+                <img class="about__picture" src="assets/img/_MG_3223.png" alt="Picture CPS">
+            </div>
         </div> 
-
-      
-            <!-- <input type="checkbox" id="raz" class="del"/>
-            <label for="raz" class="del">Показать скрытый текст</label>
-            <div>
-            <strong>Скрытый текст</strong> </div> -->
-       
     </main>
-
-
-
-    
-    
-            
-    
-        
-        
-        
-    
 </body>
 </html>
