@@ -185,6 +185,14 @@ body{
     padding-right: 16px;
 }
 
+.menu__item:active{
+    border: 2px solid #FF3E79;
+    border-radius: 6px;
+    background-color: #FFFFFF;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
 .review__text{
     display:inline-block;
     color:#7E7E82;
@@ -192,6 +200,13 @@ body{
     font-weight: 500;
     font-style: normal;
     padding-left: 20px;
+}
+.review__text:hover{
+    color: black;
+}
+
+.review__text:active{
+    color:#FF3E79
 }
 
 .review__text:active, 
