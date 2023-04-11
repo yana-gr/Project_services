@@ -1,24 +1,98 @@
-// Открытие/закрытие бокового меню
-var sidebar = document.querySelector('.sidebar');
-var openSidebar = document.querySelector('.header__burger');
 
+var   mask = document.querySelector('.mask'),
+  sidebar = document.querySelector('.sidebar'),
+  openSidebar = document.querySelector('.header__burger'),
+  closeSidebar = document.querySelector('.sidebar__burger'),
+  feedback = document.querySelector('.feedback'),
+  openFeedback = document.querySelectorAll('.btn__chat'),
+  closeFeedback = document.querySelector('.feedback__btn-close'),
+  modalCall = document.querySelector('.modal-call'),
+  openModalCall = document.querySelectorAll('.btn__call'),
+  closeModalCall = document.querySelector('.modal-call__btn-close')
+
+// Открытие/закрытие бокового меню
 openSidebar.addEventListener('click', function (evt) {
   evt.preventDefault();
-  sidebar.classList.add('sidebar--show')
+  sidebar.classList.add('sidebar--show');
+  feedback.classList.remove('sidebar--show');
+  mask.classList.add('mask--show');
+  modalCall.classList.remove('sidebar--show');
 });
-
-var closeSidebar = document.querySelector('.sidebar__burger');
 
 closeSidebar.addEventListener('click', function (evt) {
   evt.preventDefault();
-  sidebar.classList.remove('sidebar--show')
+  sidebar.classList.remove('sidebar--show');
+  mask.classList.remove('mask--show');
 });
 
 document.addEventListener('keydown', function (evt) {
   if (evt.key === "Escape") {
-    sidebar.classList.remove('sidebar--show')
+    sidebar.classList.remove('sidebar--show');
+    mask.classList.remove('mask--show');
   }
 });
+
+// Закрытие при клике ВНЕ окна
+mask.addEventListener('click', (evt) => {
+  if (evt.target === mask) {
+     mask.classList.remove('mask--show');
+     sidebar.classList.remove('sidebar--show');
+     feedback.classList.remove('sidebar--show');
+     modalCall.classList.remove('sidebar--show');
+     document.body.style.overflow = '';
+  }
+});
+
+// Открытие/закрытие Обратная связь
+for (let i = 0; i < openFeedback.length; i = i + 1){
+  openFeedback[i].addEventListener('click', function (evt) {
+    evt.preventDefault();
+    feedback.classList.add('sidebar--show');
+    sidebar.classList.remove('sidebar--show');
+    mask.classList.add('mask--show');
+    modalCall.classList.remove('sidebar--show');
+  });
+}
+
+closeFeedback.addEventListener('click', function (evt) {
+  evt.preventDefault();
+  feedback.classList.remove('sidebar--show');
+  mask.classList.remove('mask--show')
+});
+
+document.addEventListener('keydown', function (evt) {
+  if (evt.key === "Escape") {
+    feedback.classList.remove('sidebar--show');
+    mask.classList.remove('mask--show')
+  }
+});
+
+// Открытие/закрытие Звонок
+
+for (let i = 0; i < openModalCall.length; i = i + 1){
+  openModalCall[i].addEventListener('click', function (evt) {
+    evt.preventDefault();
+    modalCall.classList.add('sidebar--show');
+    sidebar.classList.remove('sidebar--show');
+    mask.classList.add('mask--show');
+    feedback.classList.remove('sidebar--show');
+  });
+}
+
+closeModalCall.addEventListener('click', function (evt) {
+  evt.preventDefault();
+  modalCall.classList.remove('sidebar--show');
+  mask.classList.remove('mask--show')
+});
+
+document.addEventListener('keydown', function (evt) {
+  if (evt.key === "Escape") {
+    modalCall.classList.remove('sidebar--show');
+    mask.classList.remove('mask--show')
+  }
+});
+
+
 
 // Слайдер
 if (document.body.clientWidth < 767) {

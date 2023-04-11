@@ -15,6 +15,7 @@
         <div class="container">
             <div class="header__raw">
                 <button class="header__burger"><img src="assets/img/burger.svg" alt="burger"></button>
+                <div class="mask"></div>
                 <div class="sidebar">
                     <div class="container">
                         <div class="sidebar__header">
@@ -35,8 +36,8 @@
                             </ul>
                         </nav>
                         <ul class="contacts__actions">
-                            <li><button class="contacts__call"><img src="assets/img/call.svg" alt="call"></button></li>
-                            <li><button class="contacts__chat"><img src="assets/img/chat.svg" alt="chat"></button></li>
+                            <li><button class="contacts__call btn__call"><img src="assets/img/call.svg" alt="call"></button></li>
+                            <li><button class="contacts__chat btn__chat"><img src="assets/img/chat.svg" alt="chat"></button></li>
                             <li><button class="contacts__profile"><img src="assets/img/profile.svg" alt="profile"></button></li>
                         </ul>
                         <span class="contacts__mail">mail@cps.com</span>
@@ -48,10 +49,37 @@
                         </ul>
                     </div>
                 </div>
+                <div class="feedback">
+                    <div class="container">
+                        <button class="feedback__btn-close"><img src="assets/img/close.svg" alt="close"></button>
+                        <h3 class="feedback__title">Обратная связь</h3>
+                        <form class="feedback__inputs">
+                            <input class="feedback__name" type="text" name="name" placeholder="Имя">
+                            <input class="feedback__tel" type="text" name="phone" placeholder="Телефон">
+                            <input class="feedback__mail" type="text" name="mail" placeholder="Электронная почта">
+                            <textarea class="feedback__message" name="message" rows="4" placeholder="Сообщение"></textarea>
+                            <article class="feedback__article">Нажимая “отправить”, вы даете согласие на <span>обработку персональных данных</span> и 
+                                соглашаетесь с нашей <span>политикой конфиденциальности</span></article>
+                            <button class="feedback__btn-send"><img src="assets/img/Rectangle_2.svg" alt="send"></button>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-call">
+                    <div class="container">
+                        <button class="modal-call__btn-close"><img src="assets/img/close.svg" alt="close"></button>
+                        <h3 class="modal-call__title">Заказать звонок</h3>
+                        <form class="modal-call__container">
+                            <input class="modal-call__tel" type="text" name="phone" placeholder="Телефон">
+                            <article class="modal-call__article">Нажимая “отправить”, вы даете согласие на <span>обработку персональных данных</span> и 
+                                соглашаетесь с нашей <span>политикой конфиденциальности</span></article>
+                            <button class="modal-call__btn-send"><img src="assets/img/Rectangle_2.svg" alt="send"></button>
+                        </form>
+                    </div>
+                </div>
                 <a class="header__label" href=#><img src="assets/img/group.svg" alt="label"></a>
                 <ul class="header__actions">
-                    <li><button class="header__call"><img src="assets/img/call.svg" alt="call"></button></li>
-                    <li><button class="header__chat"><img src="assets/img/chat.svg" alt="chat"></button></li>
+                    <li><button class="header__call btn__call"><img src="assets/img/call.svg" alt="call"></button></li>
+                    <li><button class="header__chat btn__chat"><img src="assets/img/chat.svg" alt="chat"></button></li>
                     <li><button class="header__profile"><img src="assets/img/profile.svg" alt="profile"></button></li>
                     <li><button class="header__repair"><img src="assets/img/repair.svg" alt="repair"></button></li>
                     <li><button class="header__checkstatus"><img src="assets/img/checkstatus.svg" alt="checkstatus"></button></li>
@@ -65,8 +93,8 @@
                 <div class="title__raw">
                     <h2 class="title__text">Услуги и сервисы</h2>
                     <ul class="title__buttons">
-                        <li><button class="title__call">Оставить заявку&ensp;<img src="assets/img/repair.svg" alt="call"></button></li>
-                        <li><button class="title__chat">Статус ремонта&ensp;<img src="assets/img/checkstatus.svg" alt="chat"></button></li>
+                        <li><button class="title__call btn__call">Оставить заявку&ensp;<img src="assets/img/repair.svg" alt="call"></button></li>
+                        <li><button class="title__chat btn__chat">Статус ремонта&ensp;<img src="assets/img/checkstatus.svg" alt="chat"></button></li>
                     </ul>
                 </div>
             </div>    
@@ -252,9 +280,11 @@
     </main>
     <footer>
         <div class="container">
-            <div class="footer__raw">
-                <p class="footer__info">© 2019 CPS</p>
-                <p class="footer__info">Разработано командой Apesong </p>
+            <div class="footer__row">
+                <div class="footer__info">
+                    <p class="footer__year">© 2019 CPS</a> 
+                    <p class="footer__company">Разработано командой Apesong </p>
+                </div>
                 <p class="footer__info">Политика конфиденциальности</p>
                 <p class="footer__info">Информация, размещенная на данной странице, не является публичной офертой</p>
             </div>
