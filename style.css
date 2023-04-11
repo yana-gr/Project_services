@@ -269,7 +269,6 @@ body{
                 -2px 0px 4px rgba(69, 79, 126, 0.02);
     transition: all 0.3s ease 0s;
     z-index: 6;
-    overflow: auto;
     white-space: nowrap;
     scrollbar-width: none;
 }
@@ -345,7 +344,6 @@ body{
                 -2px 0px 4px rgba(69, 79, 126, 0.02);
     transition: all 0.3s ease 0s;
     z-index: 6;
-    overflow: auto;
     white-space: nowrap;
     scrollbar-width: none;
 }
@@ -945,15 +943,13 @@ button:hover{
 
     .feedback__btn-close{
         position: absolute;
-        left: -10px;
-        z-index: 10;
+        left: -64px;
     }
 
-    /* .modal-call__btn-close{
+    .modal-call__btn-close{
         position: absolute;
-        left: -10px;
-        z-index: 10;
-    } */
+        left: -64px;
+    }
 
     .title__raw{
         margin-bottom: 32px;
