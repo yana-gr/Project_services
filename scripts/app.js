@@ -10,27 +10,31 @@ var   mask = document.querySelector('.mask'),
   openModalCall = document.querySelectorAll('.btn__call'),
   closeModalCall = document.querySelector('.modal-call__btn-close')
 
-// Открытие/закрытие бокового меню
-openSidebar.addEventListener('click', function (evt) {
-  evt.preventDefault();
-  sidebar.classList.add('sidebar--show');
-  feedback.classList.remove('sidebar--show');
-  mask.classList.add('mask--show');
-  modalCall.classList.remove('sidebar--show');
-});
 
-closeSidebar.addEventListener('click', function (evt) {
-  evt.preventDefault();
-  sidebar.classList.remove('sidebar--show');
-  mask.classList.remove('mask--show');
-});
+  if (document.body.clientWidth < 1365) {
 
-document.addEventListener('keydown', function (evt) {
-  if (evt.key === "Escape") {
+  // Открытие/закрытие бокового меню
+  openSidebar.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    sidebar.classList.add('sidebar--show');
+    feedback.classList.remove('sidebar--show');
+    mask.classList.add('mask--show');
+    modalCall.classList.remove('sidebar--show');
+  });
+
+  closeSidebar.addEventListener('click', function (evt) {
+    evt.preventDefault();
     sidebar.classList.remove('sidebar--show');
     mask.classList.remove('mask--show');
-  }
-});
+  });
+
+  document.addEventListener('keydown', function (evt) {
+    if (evt.key === "Escape") {
+      sidebar.classList.remove('sidebar--show');
+      mask.classList.remove('mask--show');
+    }
+  });
+}
 
 // Закрытие при клике ВНЕ окна
 mask.addEventListener('click', (evt) => {
